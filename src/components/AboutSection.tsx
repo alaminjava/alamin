@@ -1,0 +1,146 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Award, TrendingUp, Users, Clock } from "lucide-react";
+
+const AboutSection = () => {
+  const achievements = [
+    {
+      icon: <Users className="w-6 h-6 text-primary" />,
+      number: "250+",
+      title: "Clients Helped Online",
+      description: "Successfully brought businesses to the digital world"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6 text-accent" />,
+      number: "800+",
+      title: "Social Media Accounts",
+      description: "Managed across multiple platforms in the USA"
+    },
+    {
+      icon: <Award className="w-6 h-6 text-success" />,
+      number: "2,679",
+      title: "Hours on Upwork",
+      description: "With 45 completed jobs and excellent ratings"
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-primary" />,
+      number: "8+",
+      title: "Years Experience",
+      description: "Since 2016, consistently delivering excellence"
+    }
+  ];
+
+  const certifications = [
+    "Java Programming", "HTML, CSS & Bootstrap", "MySQL Database",
+    "WordPress Development", "Digital Marketing", "Social Media Management"
+  ];
+
+  const notableClients = [
+    "Qapital Finance", "NourishDoc", "Josh V Realty", "360x Events Management",
+    "Shiphype", "Geospatial Solutions", "Snagajob", "US Military Civil Engineers",
+    "Navy Seals", "Patient Preferred Physicians", "Kiovic Marketing"
+  ];
+
+  return (
+    <section id="about" className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <Badge variant="outline" className="mb-4 text-primary border-primary/20">
+            About Me
+          </Badge>
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            8+ Years of Digital Excellence
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Since 2016, I've been helping businesses transform their digital presence with cutting-edge 
+            WordPress development and strategic digital marketing solutions.
+          </p>
+        </div>
+
+        {/* Achievement Stats */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {achievements.map((achievement, index) => (
+            <Card key={index} className="text-center group hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+              <CardContent className="pt-6">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-colors">
+                    {achievement.icon}
+                  </div>
+                </div>
+                <div className="text-3xl font-bold text-foreground mb-2">{achievement.number}</div>
+                <h3 className="font-semibold text-foreground mb-2">{achievement.title}</h3>
+                <p className="text-sm text-muted-foreground">{achievement.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Story */}
+          <div>
+            <h3 className="text-2xl font-bold text-foreground mb-6">My Journey & Expertise</h3>
+            <div className="space-y-4 text-muted-foreground">
+              <p>
+                Starting in 2016, I've dedicated myself to mastering the art of digital transformation. 
+                My journey began with a passion for creating beautiful, functional websites that not only 
+                look stunning but actively convert visitors into loyal customers.
+              </p>
+              <p>
+                Over the years, I've had the privilege of working with diverse clients ranging from 
+                financial institutions to military organizations, each project teaching me valuable 
+                lessons about different industries and their unique digital needs.
+              </p>
+              <p>
+                My approach combines technical expertise with strategic thinking. I don't just build 
+                websites or manage social media - I create comprehensive digital ecosystems that 
+                drive real business growth and measurable results.
+              </p>
+              <p>
+                What sets me apart is my commitment to staying ahead of the curve. I continuously 
+                embrace new technologies like AI tools and marketing automation, ensuring my clients 
+                always have access to the latest and most effective digital strategies.
+              </p>
+            </div>
+          </div>
+
+          {/* Skills & Certifications */}
+          <div>
+            <div className="mb-8">
+              <h4 className="text-xl font-semibold text-foreground mb-4">Professional Certifications</h4>
+              <div className="flex flex-wrap gap-2">
+                {certifications.map((cert, index) => (
+                  <Badge key={index} variant="secondary" className="text-sm">
+                    {cert}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-xl font-semibold text-foreground mb-4">Notable Clients</h4>
+              <div className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+                {notableClients.map((client, index) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-success rounded-full"></div>
+                    <span>{client}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8 p-6 bg-gradient-card rounded-xl">
+              <h4 className="font-semibold text-foreground mb-2">Available 24/7</h4>
+              <p className="text-sm text-muted-foreground">
+                I believe in being there when my clients need me. Whether it's an urgent update, 
+                technical support, or strategic consultation, I'm always available to help your 
+                business succeed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
