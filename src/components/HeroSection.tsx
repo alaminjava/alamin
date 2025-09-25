@@ -75,19 +75,20 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 onClick={scrollToContact}
-                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-hover transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                className="bg-gradient-accent hover:bg-gradient-interactive text-accent-foreground shadow-glow hover:shadow-accent transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 border-0 font-semibold"
                 aria-label="Schedule a free consultation meeting"
               >
                 Schedule Free Consultation
-                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 backdrop-blur-sm transition-all duration-300 hover:border-primary-foreground/40"
+                className="border-2 border-primary-glow/30 text-primary-foreground hover:bg-gradient-primary hover:border-primary-glow/60 backdrop-blur-sm transition-all duration-500 hover:shadow-glow hover:scale-105 hover:-translate-y-1 group"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View My Work
+                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
           </div>
