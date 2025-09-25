@@ -51,12 +51,6 @@ export default {
           DEFAULT: "hsl(var(--success))",
           foreground: "hsl(var(--success-foreground))",
         },
-        "primary-glow": "hsl(var(--primary-glow))",
-        "accent-glow": "hsl(var(--accent-glow))",
-        "purple-deep": "hsl(var(--purple-deep))",
-        "purple-vivid": "hsl(var(--purple-vivid))",
-        "gold-bright": "hsl(var(--gold-bright))",
-        "gold-soft": "hsl(var(--gold-soft))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -72,14 +66,10 @@ export default {
         'gradient-primary': 'var(--gradient-primary)',
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-card': 'var(--gradient-card)',
-        'gradient-accent': 'var(--gradient-accent)',
-        'gradient-interactive': 'var(--gradient-interactive)',
       },
       boxShadow: {
         'elegant': 'var(--shadow-elegant)',
         'hover': 'var(--shadow-hover)',
-        'glow': 'var(--shadow-glow)',
-        'accent': 'var(--shadow-accent)',
         'soft': 'var(--shadow-soft)',
       },
       transitionTimingFunction: {
