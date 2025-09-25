@@ -56,75 +56,75 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-card">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 text-primary border-primary/20">
+    <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-gradient-card">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <Badge variant="outline" className="mb-4 text-primary border-primary/20 hover:bg-primary/5 transition-colors duration-200">
             Let's Connect
           </Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Schedule Your Free Consultation
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to transform your digital presence? Let's discuss your project and create a 
             strategy that drives real results for your business.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {/* Contact Information */}
-          <div className="lg:col-span-1">
-            <Card className="bg-primary text-primary-foreground">
+          <div className="lg:col-span-1 animate-scale-in">
+            <Card className="bg-primary text-primary-foreground hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 text-lg sm:text-xl">
                   <Calendar className="w-5 h-5" />
                   Quick Response Guaranteed
                 </CardTitle>
-                <CardDescription className="text-primary-foreground/80">
+                <CardDescription className="text-primary-foreground/80 text-sm sm:text-base">
                   Available 24/7 for consultations and support
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-accent-foreground" />
+              <CardContent className="space-y-4 sm:space-y-6">
+                <div className="flex items-center gap-3 group">
+                  <Clock className="w-5 h-5 text-accent-foreground group-hover:scale-110 transition-transform duration-200" />
                   <div>
-                    <p className="font-medium">Response Time</p>
-                    <p className="text-sm text-primary-foreground/80">Within 2-4 hours</p>
+                    <p className="font-medium text-sm sm:text-base">Response Time</p>
+                    <p className="text-xs sm:text-sm text-primary-foreground/80">Within 2-4 hours</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-accent-foreground" />
+                <div className="flex items-center gap-3 group">
+                  <Mail className="w-5 h-5 text-accent-foreground group-hover:scale-110 transition-transform duration-200" />
                   <div>
-                    <p className="font-medium">Consultation</p>
-                    <p className="text-sm text-primary-foreground/80">Free strategy session</p>
+                    <p className="font-medium text-sm sm:text-base">Consultation</p>
+                    <p className="text-xs sm:text-sm text-primary-foreground/80">Free strategy session</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Zap className="w-5 h-5 text-accent-foreground" />
+                <div className="flex items-center gap-3 group">
+                  <Zap className="w-5 h-5 text-accent-foreground group-hover:scale-110 transition-transform duration-200" />
                   <div>
-                    <p className="font-medium">Project Start</p>
-                    <p className="text-sm text-primary-foreground/80">As fast as 24 hours</p>
+                    <p className="font-medium text-sm sm:text-base">Project Start</p>
+                    <p className="text-xs sm:text-sm text-primary-foreground/80">As fast as 24 hours</p>
                   </div>
                 </div>
                 
                 <div className="pt-4 border-t border-primary-foreground/20">
-                  <h4 className="font-medium mb-3">What You'll Get:</h4>
-                  <ul className="space-y-2 text-sm text-primary-foreground/90">
-                    <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-accent-foreground rounded-full"></div>
-                      Detailed project analysis
+                  <h4 className="font-medium mb-3 text-sm sm:text-base">What You'll Get:</h4>
+                  <ul className="space-y-2 text-xs sm:text-sm text-primary-foreground/90">
+                    <li className="flex items-center gap-2 group">
+                      <div className="w-1.5 h-1.5 bg-accent-foreground rounded-full group-hover:scale-125 transition-transform duration-200"></div>
+                      <span className="group-hover:text-white transition-colors duration-200">Detailed project analysis</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-accent-foreground rounded-full"></div>
-                      Custom strategy roadmap
+                    <li className="flex items-center gap-2 group">
+                      <div className="w-1.5 h-1.5 bg-accent-foreground rounded-full group-hover:scale-125 transition-transform duration-200"></div>
+                      <span className="group-hover:text-white transition-colors duration-200">Custom strategy roadmap</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-accent-foreground rounded-full"></div>
-                      Timeline & budget estimate
+                    <li className="flex items-center gap-2 group">
+                      <div className="w-1.5 h-1.5 bg-accent-foreground rounded-full group-hover:scale-125 transition-transform duration-200"></div>
+                      <span className="group-hover:text-white transition-colors duration-200">Timeline & budget estimate</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-accent-foreground rounded-full"></div>
-                      No-obligation discussion
+                    <li className="flex items-center gap-2 group">
+                      <div className="w-1.5 h-1.5 bg-accent-foreground rounded-full group-hover:scale-125 transition-transform duration-200"></div>
+                      <span className="group-hover:text-white transition-colors duration-200">No-obligation discussion</span>
                     </li>
                   </ul>
                 </div>
@@ -133,14 +133,14 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <Card className="shadow-elegant">
+          <div className="lg:col-span-2 animate-fade-in">
+            <Card className="shadow-elegant hover:shadow-hover transition-shadow duration-300">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-foreground">
+                <CardTitle className="flex items-center gap-2 text-foreground text-lg sm:text-xl">
                   <MessageSquare className="w-5 h-5 text-primary" />
                   Tell Me About Your Project
                 </CardTitle>
-                <CardDescription>
+                <CardDescription className="text-sm sm:text-base">
                   The more details you provide, the better I can prepare for our consultation.
                 </CardDescription>
               </CardHeader>
@@ -270,7 +270,11 @@ const ContactSection = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-hover transition-all duration-300">
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-hover transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl"
+                    disabled={!formData.name || !formData.email || !formData.message}
+                  >
                     <Calendar className="w-4 h-4 mr-2" />
                     Schedule My Free Consultation
                   </Button>
