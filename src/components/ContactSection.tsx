@@ -74,14 +74,14 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {/* Contact Information */}
           <div className="lg:col-span-1 animate-scale-in">
-            <Card className="bg-primary text-primary-foreground hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+            <Card className="bg-primary text-primary-foreground border-0 shadow-lg">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-lg sm:text-xl">
                   <Calendar className="w-5 h-5" />
-                  Quick Response Guaranteed
+                  Quick Response
                 </CardTitle>
                 <CardDescription className="text-primary-foreground/80 text-sm sm:text-base">
-                  Available 24/7 for consultations and support
+                  Available 24/7 for consultations
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4 sm:space-y-6">
@@ -134,7 +134,7 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="lg:col-span-2 animate-fade-in">
-            <Card className="shadow-elegant hover:shadow-hover transition-shadow duration-300">
+            <Card className="border border-border shadow-lg">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-foreground text-lg sm:text-xl">
                   <MessageSquare className="w-5 h-5 text-primary" />
@@ -272,7 +272,7 @@ const ContactSection = () => {
 
                   <Button 
                     type="submit" 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-hover transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transition-all duration-300"
                     disabled={!formData.name || !formData.email || !formData.message}
                   >
                     <Calendar className="w-4 h-4 mr-2" />

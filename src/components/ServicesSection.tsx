@@ -74,33 +74,35 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className={`group hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 cursor-pointer ${
-                service.highlighted ? 'ring-2 ring-primary/20 bg-gradient-card' : 'bg-card hover:shadow-soft'
+              className={`group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer border ${
+                service.highlighted 
+                  ? 'border-primary/30 bg-primary/5' 
+                  : 'border-border hover:border-primary/20'
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-primary/5 rounded-xl group-hover:bg-primary/10 transition-all duration-300 group-hover:scale-110">
+                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/15 transition-all duration-300">
                     {service.icon}
                   </div>
                   {service.highlighted && (
-                    <Badge className="bg-primary text-primary-foreground animate-pulse">Popular</Badge>
+                    <Badge className="bg-primary text-primary-foreground">Popular</Badge>
                   )}
                 </div>
-                <CardTitle className="text-lg sm:text-xl text-foreground group-hover:text-primary transition-colors duration-200">
+                <CardTitle className="text-lg sm:text-xl text-foreground mb-2">
                   {service.title}
                 </CardTitle>
-                <CardDescription className="text-sm sm:text-base text-muted-foreground">
+                <CardDescription className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {service.description}
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2">
+                <ul className="space-y-2.5">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-2 text-sm group/item">
-                      <div className="w-1.5 h-1.5 bg-success rounded-full group-hover/item:scale-125 transition-transform duration-200"></div>
-                      <span className="text-foreground/80 group-hover/item:text-foreground transition-colors duration-200">{feature}</span>
+                    <li key={featureIndex} className="flex items-center gap-2.5 text-sm">
+                      <div className="w-1.5 h-1.5 bg-success rounded-full flex-shrink-0"></div>
+                      <span className="text-foreground/80">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -127,13 +129,13 @@ const ServicesSection = () => {
             ].map((tech, index) => (
               <div 
                 key={index}
-                className="flex flex-col items-center p-3 sm:p-4 bg-card rounded-xl shadow-soft hover:shadow-elegant transition-all duration-300 group cursor-pointer transform hover:-translate-y-1"
+                className="flex flex-col items-center p-4 sm:p-5 bg-card rounded-lg border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300 group cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-primary group-hover:text-accent transition-colors duration-200 mb-2 group-hover:scale-110 transform transition-transform">
+                <div className="text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
                   {tech.icon}
                 </div>
-                <span className="text-xs sm:text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-200">{tech.name}</span>
+                <span className="text-xs sm:text-sm font-medium text-foreground">{tech.name}</span>
               </div>
             ))}
           </div>
