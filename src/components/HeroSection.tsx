@@ -48,26 +48,26 @@ const HeroSection = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6 sm:mb-8 animate-slide-up">
-              <div className="text-center p-2 sm:p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-300">
+              <div className="text-center p-3 sm:p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="flex flex-col sm:flex-row items-center justify-center mb-1 sm:mb-2">
-                  <Users className="w-4 h-4 sm:w-6 sm:h-6 text-accent-foreground mb-1 sm:mb-0 sm:mr-2" />
-                  <span className="text-lg sm:text-2xl font-bold text-primary-foreground">250+</span>
+                  <Users className="w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground mb-1 sm:mb-0 sm:mr-2" />
+                  <span className="text-xl sm:text-2xl font-bold text-primary-foreground">250+</span>
                 </div>
-                <p className="text-primary-foreground/80 text-xs sm:text-sm">Happy Clients</p>
+                <p className="text-primary-foreground/80 text-xs sm:text-sm font-medium">Happy Clients</p>
               </div>
-              <div className="text-center p-2 sm:p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-300">
+              <div className="text-center p-3 sm:p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="flex flex-col sm:flex-row items-center justify-center mb-1 sm:mb-2">
-                  <Globe className="w-4 h-4 sm:w-6 sm:h-6 text-accent-foreground mb-1 sm:mb-0 sm:mr-2" />
-                  <span className="text-lg sm:text-2xl font-bold text-primary-foreground">80+</span>
+                  <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground mb-1 sm:mb-0 sm:mr-2" />
+                  <span className="text-xl sm:text-2xl font-bold text-primary-foreground">80+</span>
                 </div>
-                <p className="text-primary-foreground/80 text-xs sm:text-sm">Websites Built</p>
+                <p className="text-primary-foreground/80 text-xs sm:text-sm font-medium">Websites Built</p>
               </div>
-              <div className="text-center p-2 sm:p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-300">
+              <div className="text-center p-3 sm:p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="flex flex-col sm:flex-row items-center justify-center mb-1 sm:mb-2">
-                  <Star className="w-4 h-4 sm:w-6 sm:h-6 text-accent-foreground mb-1 sm:mb-0 sm:mr-2" />
-                  <span className="text-lg sm:text-2xl font-bold text-primary-foreground">800+</span>
+                  <Star className="w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground mb-1 sm:mb-0 sm:mr-2" />
+                  <span className="text-xl sm:text-2xl font-bold text-primary-foreground">800+</span>
                 </div>
-                <p className="text-primary-foreground/80 text-xs sm:text-sm">Social Accounts</p>
+                <p className="text-primary-foreground/80 text-xs sm:text-sm font-medium">Social Accounts</p>
               </div>
             </div>
 
@@ -75,16 +75,16 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 onClick={scrollToContact}
-                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-hover transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all duration-300"
                 aria-label="Schedule a free consultation meeting"
               >
                 Schedule Free Consultation
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
               </Button>
               <Button 
-                variant="outline" 
+                variant="secondary" 
                 size="lg"
-                className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 backdrop-blur-sm transition-all duration-300 hover:border-primary-foreground/40"
+                className="bg-white/95 text-primary hover:bg-white border border-primary/10 shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View My Work
