@@ -84,7 +84,7 @@ const HeroSection = () => {
               <Button 
                 variant="secondary" 
                 size="lg"
-                className="bg-white/95 text-primary hover:bg-white border border-primary/10 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-white/20 text-white border border-white/30 hover:bg-white hover:text-primary shadow-lg hover:shadow-xl transition-all duration-300"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View My Work
